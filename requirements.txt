@@ -1,0 +1,32 @@
+# ============================================================
+# Vision Browser Agent  Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+
+# --- Browser Control ---
+selenium>=4.15.0             # Web browser automation
+webdriver-manager>=4.0.0     # Auto-downloads matching ChromeDriver
+
+# --- Image Processing ---
+Pillow>=10.0.0               # Image manipulation (PIL)
+numpy>=1.24.0                # Array operations (needed by EasyOCR)
+
+# --- OCR (for fallback vision strategy) ---
+easyocr>=1.7.0               # Text detection from screenshots
+# Alternative: pip install pytesseract (also needs Tesseract binary installed)
+
+# --- HTTP Requests (for HF Inference API) ---
+requests>=2.31.0
+
+# --- For LOCAL Gemma Model (GPU mode) ---
+# Only install these if you have a GPU and want to run Gemma locally
+# Uncomment the lines below:
+# transformers>=4.40.0       # HuggingFace model library
+# torch>=2.1.0               # PyTorch (deep learning framework)
+# torchvision>=0.16.0        # Image transforms for PyTorch
+# accelerate>=0.27.0         # Distributed training/inference helper
+# sentencepiece>=0.1.99      # Tokenizer for Gemma
+# bitsandbytes>=0.41.0       # Optional: 4-bit quantization (saves memory)
+
+# --- Utilities ---
+python-dotenv>=1.0.0         # Load .env files for secrets like HF_TOKEN
